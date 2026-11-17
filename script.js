@@ -2,7 +2,7 @@
 
 // ----- Countdown to the event (only the Home page has one) -----
 // Change the date/time here if needed (format: YYYY-MM-DDTHH:MM:SS)
-const eventDate = new Date("2026-11-28T17:30:00");
+const eventDate = new Date("2026-11-28T18:00:00");
 
 function updateCountdown() {
   if (!document.getElementById("cd-days")) return;
