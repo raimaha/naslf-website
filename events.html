@@ -1,182 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <!-- Events page. Shared design is in style.css, shared script in script.js.
-       Header and footer are repeated on every page: if you change the menu, change it on all pages. -->
+  <!-- Events page. Design: style.css. Script: script.js.
+       The header and footer are repeated on every page: if you change the menu, change it on every page. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events | Nepalese Arts, Science & Literature Forum UK</title>
-  <meta name="description" content="Nepali Cinema: From Script to Screen, Saturday 28 November 2026, Folkestone.">
+  <title>Events | Nepalese Arts, Sciences & Literature Forum UK</title>
+  <meta name="description" content="Nepali Cinema: From Script to Screen. Saturday 28 November 2026, 6 to 10 pm, Three Hills Sports Park, Folkestone. Tickets £20.">
+  <link rel="canonical" href="https://naslf-uk.org/events">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nepalese Arts, Sciences & Literature Forum UK">
+  <meta property="og:title" content="Events | Nepalese Arts, Sciences & Literature Forum UK">
+  <meta property="og:description" content="Nepali Cinema: From Script to Screen. Saturday 28 November 2026, 6 to 10 pm, Three Hills Sports Park, Folkestone. Tickets £20.">
+  <meta property="og:url" content="https://naslf-uk.org/events">
+  <meta name="theme-color" content="#454545">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Event", "name": "Nepali Cinema: From Script to Screen", "description": "An interactive evening with filmmaker and director Ram Babu Gurung, featuring actors Srijana Subba, Pashupati Rai, Rishma Gurung and Sirjana Gurung. Hosted by Deepen Thulung and Padam Subba.", "startDate": "2026-11-28T18:00:00+00:00", "endDate": "2026-11-28T22:00:00+00:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "maximumAttendeeCapacity": 50, "location": {"@type": "Place", "name": "Three Hills Sports Park", "address": {"@type": "PostalAddress", "streetAddress": "Cheriton Road", "addressLocality": "Folkestone", "addressRegion": "Kent", "postalCode": "CT19 5JU", "addressCountry": "GB"}}, "offers": {"@type": "Offer", "price": "20", "priceCurrency": "GBP", "url": "https://naslf-uk.org/contact"}, "organizer": {"@type": "Organization", "name": "Nepalese Arts, Sciences & Literature Forum UK", "url": "https://naslf-uk.org"}, "performer": [{"@type": "Person", "name": "Ram Babu Gurung"}, {"@type": "Person", "name": "Srijana Subba"}, {"@type": "Person", "name": "Pashupati Rai"}, {"@type": "Person", "name": "Rishma Gurung"}, {"@type": "Person", "name": "Sirjana Gurung"}]}
+  </script>
 </head>
 <body>
 
-  <!-- ================= NAVIGATION ================= -->
-  <header>
-    <nav class="container nav">
-      <a href="index.html" class="logo">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a href="index.html" class="brand">
         <div class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="logo-text">Nepalese Arts, Science &amp; Literature Forum <small>United Kingdom</small></div>
+        <span class="brand-name">Nepalese Arts, Sciences &amp; Literature Forum<small>United Kingdom</small></span>
       </a>
-      <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="events.html" class="active">Events</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="get-involved.html">Get Involved</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html" aria-current="page">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- ================= EVENT PROGRAMME ================= -->
-  <section id="programme">
-    <div class="container programme-grid">
-      <div>
-        <p class="eyebrow">Filmmaking · Direction · Acting</p>
-        <h2 class="section-title">Nepali Cinema: From Script to Screen</h2>
+  <main id="main">
+
+    <section class="page-head">
+      <div class="container">
+        <p class="eyebrow">Events</p>
+        <h1>Nepali Cinema: From Script to Screen</h1>
         <p class="lead">An interactive evening with filmmaker and director Ram Babu Gurung, exploring how a Nepali film goes from an idea on paper to the big screen.</p>
-
-        <dl class="programme-list">
-          <div><dt>Guest</dt><dd>Ram Babu Gurung, filmmaker &amp; director</dd></div>
-          <div><dt>Featuring</dt><dd>Padam Subba, producer &amp; filmmaker</dd></div>
-          <div><dt>Actors</dt><dd>Srijana Subba, Pashupati Rai, Rishma Gurung &amp; Sirjana Gurung</dd></div>
-          <div><dt>Host</dt><dd>Deepen Thulung</dd></div>
-          <div><dt>When</dt><dd>Saturday 28 November 2026, 6:00 pm – 10:00 pm</dd></div>
-          <div><dt>Where</dt><dd>Three Hills Sports Park, Cheriton Road, Folkestone, Kent CT19 5JU</dd></div>
-          <div><dt>Tickets</dt><dd>£20 per person, includes starter and main buffet. Tickets must be reserved and paid in advance.</dd></div>
-          <div><dt>Bar</dt><dd>Pay-as-you-go bar open all evening</dd></div>
-        </dl>
-
-        <p class="programme-credits">
-          Organised by <strong>Nepalese Arts, Science &amp; Literature Forum UK</strong><br>
-          Supported by <strong>Folkestone Nepalese Community</strong> &amp; <strong>Sagarmatha Gurkha Nepalese Community, Ashford</strong><br>
-          Programme Coordinator: <strong>Maha Rai, PhD</strong>
-        </p>
-        <a href="contact.html" class="btn btn-dark">Reserve your ticket</a>
       </div>
-      <div class="event-side">
-        <!-- RUNNING ORDER: edit times here -->
-        <div class="side-card">
-          <p class="eyebrow">Running order</p>
-          <ol class="timeline">
-            <li><time>6:00 pm</time><span>Arrival of all guests</span></li>
-            <li><time>6:30 pm</time><span>Starter buffet</span></li>
-            <li><time>7:05 pm</time><span>Talk show: <em>Nepali Cinema, From Script to Screen</em></span></li>
-            <li><time>8:15 pm</time><span>Main buffet</span></li>
-            <li><time>10:00 pm</time><span>Programme concludes</span></li>
-          </ol>
-          <p class="side-note">Pay-as-you-go bar open all evening.</p>
-        </div>
+    </section>
 
-        <!-- MENU: edit dishes here -->
-        <div class="side-card">
-          <p class="eyebrow">Buffet menu</p>
-          <ul class="menu-list">
-            <li>Honey &amp; garlic chicken skewers with sriracha lime dip</li>
-            <li>Smoked salmon and cream cheese tart with lemon and dill</li>
-            <li>Duck spring rolls in plum hoisin sauce</li>
-            <li>Honey roast gammon with a selection of chutneys</li>
-            <li>Roast beef Yorkshire puddings with creamed horseradish</li>
-            <li>Roast potatoes with sea salt and cracked pepper</li>
-            <li>Classic Waldorf salad</li>
-            <li>Roasted Mediterranean vegetable and couscous salad</li>
-            <li>Heirloom tomato salad with balsamic glaze</li>
-            <li>Artisan breads with oils and dips</li>
+    <section id="programme">
+      <div class="container feature">
+        <div class="poster-wrap">
+          <!-- EVENT POSTER: built in HTML so it stays sharp at any size -->
+          <figure class="poster" aria-label="Event poster: Nepali Cinema, From Script to Screen. Saturday 28 November 2026, 6 to 10 pm, Three Hills Sports Park, Folkestone. Tickets £20.">
+            <div class="poster-inner">
+              <span class="logo-tile" aria-hidden="true"><div class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></div></span>
+              <p class="p-forum">NEPALESE ARTS, SCIENCES &amp; LITERATURE FORUM UK</p>
+              <div class="p-rule"></div>
+              <p class="p-title">NEPALI<br>CINEMA</p>
+              <p class="p-sub">From Script to Screen</p>
+              <p class="p-tags">FILMMAKING • DIRECTION • ACTING</p>
+              <p class="p-intro">An Interactive Evening with Filmmaker &amp; Director</p>
+              <p class="p-name">Ram Babu Gurung</p>
+              <p class="p-feat">Featuring Actors <strong>Srijana Subba</strong>, <strong>Pashupati Rai</strong>,<br><strong>Rishma Gurung</strong> &amp; <strong>Sirjana Gurung</strong></p>
+              <p class="p-host">Hosted by <strong>Deepen Thulung</strong> &amp; <strong>Padam Subba</strong></p>
+              <div class="p-line"></div>
+              <p class="p-date">Saturday, 28 November 2026</p>
+              <p class="p-time">6:00 PM – 10:00 PM</p>
+              <p class="p-venue">Three Hills Sports Park</p>
+              <p class="p-addr">Cheriton Road, Folkestone, Kent, CT19 5JU</p>
+              <div class="p-order">
+                <div><b>6:00 PM</b><span>Arrival of guests</span></div>
+                <div><b>6:30 PM</b><span>Starter buffet</span></div>
+                <div><b>7:05 PM</b><span>Talk show</span></div>
+                <div><b>8:15 PM</b><span>Main buffet</span></div>
+                <div><b>10:00 PM</b><span>Programme concludes</span></div>
+              </div>
+              <div class="p-line"></div>
+              <p class="p-price">TICKETS £20</p>
+              <p class="p-inc">Includes starter &amp; main buffet • Pay-as-you-go bar all evening</p>
+              <p class="p-reserve">LIMITED TO 50 PEOPLE · RESERVE &amp; PAY IN ADVANCE</p>
+              <p class="p-contact">naslf-uk@hotmail.com · 07733 455320 · naslf-uk.org</p>
+              <div class="p-foot">
+                <p>Organised by <strong>Nepalese Arts, Sciences &amp; Literature Forum UK</strong></p>
+                <p>Programme Coordinator: <strong>Maha Rai, PhD</strong></p>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div>
+          <p class="eyebrow">Filmmaking · Direction · Acting</p>
+          <h2>The evening</h2>
+          <dl class="facts">
+            <div><dt>Guest</dt><dd>Ram Babu Gurung, filmmaker &amp; director</dd></div>
+            <div><dt>Featuring Actors</dt><dd>Srijana Subba, Pashupati Rai, Rishma Gurung &amp; Sirjana Gurung</dd></div>
+            <div><dt>Hosts</dt><dd>Deepen Thulung &amp; Padam Subba</dd></div>
+            <div><dt>When</dt><dd>Saturday 28 November 2026, 6:00 pm – 10:00 pm</dd></div>
+            <div><dt>Where</dt><dd>Three Hills Sports Park, Cheriton Road, Folkestone, Kent CT19 5JU</dd></div>
+            <div><dt>Tickets</dt><dd>£20 per person, includes starter and main buffet. Limited to 50 people. Tickets must be reserved and paid in advance.</dd></div>
+            <div><dt>Bar</dt><dd>Pay-as-you-go bar open all evening</dd></div>
+          </dl>
+          <p class="credits">Organised by <strong>Nepalese Arts, Sciences &amp; Literature Forum UK</strong><br>Programme Coordinator: <strong>Maha Rai, PhD</strong><br>Official photographer: <a href="https://www.facebook.com/profile.php?id=61596335881298" target="_blank" rel="noopener" class="text-link">view on Facebook</a></p>
+          <div class="countdown" data-countdown aria-label="Time until the event">
+            <div><span data-days>--</span><small>Days</small></div>
+            <div><span data-hours>--</span><small>Hours</small></div>
+            <div><span data-mins>--</span><small>Minutes</small></div>
+          </div>
+          <div class="btn-row">
+            <a href="contact.html#book" class="btn btn-dark">Reserve your ticket</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <div class="container">
+        <p class="eyebrow">On the night</p>
+        <h2 class="section-title">Running order &amp; menu</h2>
+        <div class="two-col" style="margin-top:40px">
+          <div class="card">
+            <p class="eyebrow">Running order</p>
+            <h3>Saturday 28 November</h3>
+            <ol class="timeline">
+              <li><time>6:00 pm</time><span>Arrival of all guests</span></li>
+              <li><time>6:30 pm</time><span>Starter buffet</span></li>
+              <li><time>7:05 pm</time><span>Talk show: <em>Nepali Cinema, From Script to Screen</em></span></li>
+              <li><time>8:15 pm</time><span>Main buffet</span></li>
+              <li><time>10:00 pm</time><span>Programme concludes</span></li>
+            </ol>
+            <p class="small-note">Pay-as-you-go bar open all evening.</p>
+          </div>
+          <div class="card">
+            <p class="eyebrow">Buffet menu</p>
+            <h3>Included with your ticket</h3>
+            <ul class="menu-list">
+              <li>Honey &amp; garlic chicken skewers with sriracha lime dip</li>
+              <li>Smoked salmon and cream cheese tart with lemon and dill</li>
+              <li>Duck spring rolls in plum hoisin sauce</li>
+              <li>Honey roast gammon with a selection of chutneys</li>
+              <li>Roast beef Yorkshire puddings with creamed horseradish</li>
+              <li>Roast potatoes with sea salt and cracked pepper</li>
+              <li>Classic Waldorf salad</li>
+              <li>Roasted Mediterranean vegetable and couscous salad</li>
+              <li>Heirloom tomato salad with balsamic glaze</li>
+              <li>Artisan breads with oils and dips</li>
+            </ul>
+            <p class="small-note">Please tell us about any dietary requirements when you book.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="guests">
+      <div class="container">
+        <p class="eyebrow">Meet the guests</p>
+        <h2 class="section-title">The people behind the screen</h2>
+        <div class="guest-grid">
+          <article class="guest guest-wide">
+            <p class="guest-role">Filmmaker &amp; Director</p>
+            <h3>Ram Babu Gurung</h3>
+            <p>Ram Babu Gurung is a Nepalese writer and director known for bringing stories from Nepal's rural heartland to the big screen. After his first film, <em>Anagarik</em>, a community film about Gurung life, and several documentaries, he made his commercial debut with <em>Kabaddi</em>. The Kabaddi series went on to become one of the most popular in Nepali cinema, loved in Nepal and by Nepali audiences around the world. His other films include <em>Purano Dunga</em> and <em>Degree Maila</em>, and his work is known for original stories, real settings and a warm sense of humour.</p>
+          </article>
+          <article class="guest">
+            <p class="guest-role">Featuring Actor</p>
+            <h3>Srijana Subba</h3>
+            <p>Srijana Subba is an award-winning Nepalese actress and theatre artist, now based in the UK. Her films include <em>Loot</em>, <em>Kabaddi Kabaddi</em>, <em>Loot 2</em> and <em>Dying Candle</em>, for which she won Best Actress at Nepal's National Film Awards and the Kamana Film Awards. Most recently, she gave an outstanding performance in <em>Anjila</em>. On stage, she has also directed and performed in the play <em>Yuma</em>.</p>
+          </article>
+          <article class="guest">
+            <p class="guest-role">Featuring Actor</p>
+            <h3>Pashupati Rai</h3>
+            <p>Pashupati Rai is an actor, director and theatre teacher who has been part of Aarohan Theatre Group since 2005. A graduate of Gurukul: School of Theatre in Kathmandu, she has acted in more than 25 stage plays, from <em>Oedipus</em> and <em>A Caucasian Chalk Circle</em> to <em>Muna Madan</em>, and in over a thousand street and forum theatre performances. On screen she has appeared in <em>Kabaddi</em>, <em>Kabaddi Kabaddi</em>, <em>Degree Maila</em>, <em>Gaun Aayeko Baato</em> and <em>Rajagunj</em>, and worked as assistant director on <em>Kabaddi 4</em> and <em>Phulbari</em>. She has toured internationally, including the UK, where she has taken part in many talk shows on Nepali cinema and theatre.</p>
+          </article>
+          <article class="guest">
+            <p class="guest-role">Featuring Actor</p>
+            <h3>Rishma Gurung</h3>
+            <p>Born in Pokhara, Rishma Gurung began her career in Gurung-language films before making her Nepali film debut in <em>Kabaddi</em> as Maiya, a role she went on to play in <em>Kabaddi Kabaddi</em> and <em>Kabaddi Kabaddi Kabaddi</em>. She gave an outstanding performance in <em>Jhumkee</em>, learning the Tharu language for the role, and now returns in <em>Kabaddi 5</em>.</p>
+          </article>
+          <article class="guest">
+            <p class="guest-role">Featuring Actor</p>
+            <h3>Sirjana Gurung</h3>
+            <p>Sirjana Gurung is a London-based performer and event host, and a familiar face in the UK Nepalese community. She makes her Nepali cinema debut as one of the lead characters in <em>Kabaddi 5</em>. She was crowned Miss UK Nepal 2017, performed in the London 2012 Olympics Closing Ceremony, and has worked as an event emcee since 2017. Alongside her creative work, she has built a career of more than ten years in clinical research, after graduating with First Class Honours in Biomedical Sciences from Brunel University London.</p>
+          </article>
+          <article class="guest">
+            <p class="guest-role">Host · Writer &amp; Director</p>
+            <h3>Deepen Thulung</h3>
+            <p>Deepen Thulung is a Nepalese writer and director, now based in the UK.</p>
+          </article>
+          <article class="guest">
+            <p class="guest-role">Host · Filmmaker &amp; Producer</p>
+            <h3>Padam Subba</h3>
+            <p>Padam Subba is a Nepalese filmmaker and producer, now based in the UK.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="past-events">
+      <div class="container">
+        <p class="eyebrow">Past events</p>
+        <h2 class="section-title">What we have hosted</h2>
+        <div class="past-grid">
+          <!-- Add new past events at the START of this list -->
+          <article class="past">
+            <p class="past-num">03</p>
+            <h3>An Evening with Legendary Actor Neer Shah</h3>
+          </article>
+          <article class="past">
+            <p class="past-num">02</p>
+            <h3>An Evening with Director Dipendra Lama</h3>
+          </article>
+          <article class="past">
+            <p class="past-num">01 · Our first event</p>
+            <h3>Live Concert with Ganga Raj Rai</h3>
+            <p>UK-based Nepalese musician and singer</p>
+          </article>
+        </div>
+        <p class="small-note" style="margin-top:32px">Watch videos from our events on our <a href="https://www.youtube.com/@gangamusictv/videos" target="_blank" rel="noopener" class="text-link">official YouTube channel</a>.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <p class="eyebrow">Limited to 50 people</p>
+        <h2 class="section-title">Reserve your ticket</h2>
+        <p class="lead">Places are limited to 50 people. Tickets are £20 per person and must be reserved and paid in advance.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a href="contact.html#book" class="btn btn-light">How to book</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand"><div class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></div><span class="brand-name">Nepalese Arts, Sciences &amp; Literature Forum<small>United Kingdom</small></span></div>
+          <p>The forum works to celebrate Nepalese arts, science and literature in the UK by hosting events and talk shows.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="get-involved.html">Get involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-          <p class="side-note">Please tell us about any dietary requirements when you book.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:naslf-uk@hotmail.com">naslf-uk@hotmail.com</a></li>
+            <li><a href="tel:07733455320">07733 455320</a></li>
+            <li>Kent, United Kingdom</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/@gangamusictv/videos" target="_blank" rel="noopener">Official YouTube channel</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61596335881298" target="_blank" rel="noopener">Official photographer</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ================= MEET THE GUESTS ================= -->
-  <!-- To edit a bio, change the text inside <p>...</p>. To add a photo later, put
-       <img src="photo-name.jpg" alt="Name"> at the top of that guest's card. -->
-  <section class="guests" id="guests">
-    <div class="container">
-      <p class="eyebrow">Meet the guests</p>
-      <h2 class="section-title">The people behind the screen</h2>
-      <div class="guest-grid">
-
-        <article class="guest">
-          <p class="guest-role">Filmmaker &amp; Director</p>
-          <h3>Ram Babu Gurung</h3>
-          <p>Ram Babu Gurung is a Nepalese writer and director known for bringing stories from Nepal's rural heartland to the big screen. After his first film, <em>Anagarik</em>, a community film about Gurung life, and several documentaries, he made his commercial debut with <em>Kabaddi</em>. The Kabaddi series went on to become one of the most popular in Nepali cinema, loved in Nepal and by Nepali audiences around the world. His other films include <em>Purano Dunga</em> and <em>Degree Maila</em>, and his work is known for original stories, real settings and a warm sense of humour.</p>
-        </article>
-
-        <article class="guest">
-          <p class="guest-role">Producer &amp; Filmmaker</p>
-          <h3>Padam Subba</h3>
-          <p>Padam Subba is a Nepalese filmmaker and producer, now based in the UK.</p>
-        </article>
-
-        <article class="guest">
-          <p class="guest-role">Actor</p>
-          <h3>Srijana Subba</h3>
-          <p>Srijana Subba is an award-winning Nepalese actress and theatre artist. Her films include <em>Loot</em>, <em>Kabaddi Kabaddi</em>, <em>Loot 2</em> and <em>Dying Candle</em>, for which she won Best Actress at Nepal's National Film Awards and the Kamana Film Awards. On stage, she has also directed and performed in the play <em>Yuma</em>.</p>
-        </article>
-
-        <article class="guest">
-          <p class="guest-role">Actor</p>
-          <h3>Pashupati Rai</h3>
-          <p>Pashupati Rai is an actor, director and theatre teacher who has been part of Aarohan Theatre Group since 2005. A graduate of Gurukul: School of Theatre in Kathmandu, she has acted in more than 25 stage plays, from <em>Oedipus</em> and <em>A Caucasian Chalk Circle</em> to <em>Muna Madan</em>, and in over a thousand street and forum theatre performances. On screen she has appeared in <em>Kabaddi</em>, <em>Kabaddi Kabaddi</em>, <em>Degree Maila</em>, <em>Gaun Aayeko Baato</em> and <em>Rajagunj</em>, and worked as assistant director on <em>Kabaddi 4</em> and <em>Phulbari</em>. She has toured internationally, including to the UK, where she has led theatre workshops for young people in London.</p>
-        </article>
-
-        <article class="guest">
-          <p class="guest-role">Actor</p>
-          <h3>Rishma Gurung</h3>
-          <p>Born in Pokhara, Rishma Gurung began her career in Gurung-language films before making her Nepali film debut in <em>Kabaddi</em> as Maiya, a role she went on to play in <em>Kabaddi Kabaddi</em> and <em>Kabaddi Kabaddi Kabaddi</em>. She also starred in <em>Jhumkee</em>, learning the Tharu language for the role.</p>
-        </article>
-
-        <article class="guest">
-          <p class="guest-role">Actor</p>
-          <h3>Sirjana Gurung</h3>
-          <p>Sirjana Gurung is a London-based performer and event host, and a familiar face in the UK Nepalese community. She makes her Nepali cinema debut in <em>Kabaddi 5</em>. She was crowned Miss UK Nepal 2017, performed in the London 2012 Olympics Closing Ceremony, and has worked as an event emcee since 2017. Alongside her creative work, she has built a career of more than ten years in clinical research, after graduating with First Class Honours in Biomedical Sciences from Brunel University London.</p>
-        </article>
-
-        <article class="guest guest-wide">
-          <p class="guest-role">Host · Writer &amp; Director</p>
-          <h3>Deepen Thulung</h3>
-          <p>Deepen Thulung is a Nepalese writer and director, now based in the UK.</p>
-        </article>
-
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Nepalese Arts, Sciences &amp; Literature Forum UK</span>
+        <span>Arts · Science · Literature</span>
       </div>
-    </div>
-  </section>
-
-  <!-- ================= PAST EVENTS ================= -->
-  <!-- Add new past events at the TOP of the list -->
-  <section class="past" id="past-events">
-    <div class="container">
-      <p class="eyebrow">Past events</p>
-      <h2 class="section-title">What we've hosted</h2>
-      <ol class="past-list">
-        <li>
-          <h3>An Evening with Legendary Actor Nir Shah</h3>
-        </li>
-        <li>
-          <h3>An Evening with Director Dipendra Lama</h3>
-        </li>
-        <li>
-          <span class="past-tag">Our first event</span>
-          <h3>Live Concert with Ganga Raj Rai</h3>
-          <p>UK-based Nepalese musician and singer</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-
-
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <div class="container footer-row">
-      <div class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></div>
-      <span>© <span id="year">2026</span> Nepalese Arts, Science &amp; Literature Forum UK</span>
     </div>
   </footer>
 

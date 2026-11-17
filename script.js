@@ -1,28 +1,39 @@
-// NASLF UK website: shared script for every page
+// Nepalese Arts, Sciences & Literature Forum UK: shared script for every page
 
-// ----- Countdown to the event (only the Home page has one) -----
-// Change the date/time here if needed (format: YYYY-MM-DDTHH:MM:SS)
-const eventDate = new Date("2026-11-28T18:00:00");
-
-function updateCountdown() {
-  if (!document.getElementById("cd-days")) return;
-  const diff = eventDate - new Date();
-  if (diff <= 0) {
-    document.querySelector(".countdown").innerHTML =
-      '<div style="grid-column:1/-1"><span style="font-size:1.1rem">Happening now / completed</span></div>';
-    return;
-  }
-  document.getElementById("cd-days").textContent  = Math.floor(diff / 86400000);
-  document.getElementById("cd-hours").textContent = Math.floor(diff / 3600000) % 24;
-  document.getElementById("cd-mins").textContent  = Math.floor(diff / 60000) % 60;
+// ----- Mobile menu -----
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  navLinks.querySelectorAll("a").forEach(a =>
+    a.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    })
+  );
 }
-updateCountdown();
-setInterval(updateCountdown, 30000);
 
-// ----- Close the mobile menu after tapping a link -----
-document.querySelectorAll(".nav-links a").forEach(a =>
-  a.addEventListener("click", () => document.querySelector(".nav-links").classList.remove("open"))
-);
+// ----- Countdown to the event -----
+// Event start: Saturday 28 November 2026, 6:00 pm UK time (UK time = GMT in November)
+const eventDate = new Date("2026-11-28T18:00:00Z");
+
+function updateCountdowns() {
+  document.querySelectorAll("[data-countdown]").forEach(box => {
+    const diff = eventDate - new Date();
+    if (diff <= 0) {
+      box.innerHTML = '<p class="done">Thank you to everyone who joined us</p>';
+      return;
+    }
+    box.querySelector("[data-days]").textContent  = Math.floor(diff / 86400000);
+    box.querySelector("[data-hours]").textContent = Math.floor(diff / 3600000) % 24;
+    box.querySelector("[data-mins]").textContent  = Math.floor(diff / 60000) % 60;
+  });
+}
+updateCountdowns();
+setInterval(updateCountdowns, 30000);
 
 // ----- Keep the footer year current -----
-document.getElementById("year").textContent = new Date().getFullYear();
+document.querySelectorAll("[data-year]").forEach(el => (el.textContent = new Date().getFullYear()));
