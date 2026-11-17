@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Get Involved page. Shared design is in style.css, shared script in script.js.
+       Header and footer are repeated on every page: if you change the menu, change it on all pages. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved | Nepalese Arts, Science & Literature Forum UK</title>
+  <meta name="description" content="Become a member, perform or volunteer with the forum.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header>
+    <nav class="container nav">
+      <a href="index.html" class="logo">
+        <div class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="logo-text">Nepalese Arts, Science &amp; Literature Forum <small>United Kingdom</small></div>
+      </a>
+      <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="get-involved.html" class="active">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= GET INVOLVED ================= -->
+  <section id="involved">
+    <div class="container">
+      <p class="eyebrow">Get involved</p>
+      <h2 class="section-title">Be part of the forum</h2>
+      <p class="lead">Whether you write, create, build, heal, research or simply enjoy Nepalese culture, there is a place for you.</p>
+      <div class="involve-grid">
+        <div class="involve-card">
+          <h3>Become a member</h3>
+          <p>Join our community, hear about events first and take part in forum activities.</p>
+        </div>
+        <div class="involve-card">
+          <h3>Perform or present</h3>
+          <p>Share your poetry, art, music or research at one of our programmes.</p>
+        </div>
+        <div class="involve-card">
+          <h3>Volunteer or sponsor</h3>
+          <p>Help us organise events, or support the forum as an individual or business.</p>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-dark">Contact us to join</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container footer-row">
+      <div class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <span>© <span id="year">2026</span> Nepalese Arts, Science &amp; Literature Forum UK</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

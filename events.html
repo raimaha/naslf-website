@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Events page. Shared design is in style.css, shared script in script.js.
+       Header and footer are repeated on every page: if you change the menu, change it on all pages. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Nepalese Arts, Science & Literature Forum UK</title>
+  <meta name="description" content="Nepali Cinema: From Script to Screen, Saturday 28 November 2026, Folkestone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header>
+    <nav class="container nav">
+      <a href="index.html" class="logo">
+        <div class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="logo-text">Nepalese Arts, Science &amp; Literature Forum <small>United Kingdom</small></div>
+      </a>
+      <button class="menu-btn" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= EVENT PROGRAMME ================= -->
+  <section id="programme">
+    <div class="container programme-grid">
+      <div>
+        <p class="eyebrow">Filmmaking · Direction · Acting</p>
+        <h2 class="section-title">Nepali Cinema: From Script to Screen</h2>
+        <p class="lead">An interactive evening with filmmaker and director Ram Babu Gurung, exploring how a Nepali film goes from an idea on paper to the big screen.</p>
+
+        <dl class="programme-list">
+          <div><dt>Guest</dt><dd>Ram Babu Gurung, filmmaker &amp; director</dd></div>
+          <div><dt>Featuring</dt><dd>Padam Subba, producer &amp; filmmaker</dd></div>
+          <div><dt>Actors</dt><dd>Srijana Subba, Pashupati Rai, Rishma Gurung &amp; Sirjana Gurung</dd></div>
+          <div><dt>Host</dt><dd>Deepen Thulung</dd></div>
+          <div><dt>When</dt><dd>Saturday 28 November 2026, 5:30 pm – 8:00 pm</dd></div>
+          <div><dt>Where</dt><dd>Three Hills Sports Park, Cheriton Road, Folkestone, Kent CT19 5JU</dd></div>
+          <div><dt>Entry</dt><dd>£20, includes evening meal. Pay-as-you-go bar. Advance registration required.</dd></div>
+        </dl>
+
+        <p class="programme-credits">
+          Organised by <strong>Nepalese Arts, Science &amp; Literature Forum UK</strong><br>
+          Supported by <strong>Folkestone Nepalese Community</strong> &amp; <strong>Sagarmatha Gurkha Nepalese Community, Ashford</strong><br>
+          Programme Coordinator: <strong>Maha Rai, PhD</strong>
+        </p>
+        <a href="contact.html" class="btn btn-dark">Register now</a>
+      </div>
+      <div class="poster">
+        <img src="poster.jpg" alt="Event poster: Nepali Cinema, From Script to Screen. Saturday 28 November 2026, 5:30 to 8:00 pm, Three Hills Sports Park, Folkestone. Entry £20.">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container footer-row">
+      <div class="logo-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+      <span>© <span id="year">2026</span> Nepalese Arts, Science &amp; Literature Forum UK</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

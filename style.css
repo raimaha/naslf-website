@@ -1,0 +1,160 @@
+/* =========================================================
+   NASLF UK website: shared design for every page.
+   Change a colour here and it changes on all pages.
+   ========================================================= */
+/* ---------- 1. COLOURS ---------- */
+    :root {
+      --black: #333333;      /* soft black / dark grey: change this one value to make everything lighter or darker */
+      --white: #FFFFFF;
+      --grey: #6B6B6B;        /* secondary text */
+      --line: #E4E4E4;        /* thin borders */
+      --soft: #F5F5F5;        /* light background panels */
+      --header-bg: #454545;   /* header & footer background (charcoal grey) */
+
+      /* Logo colours: the ONLY colours on the site */
+      --arts: #FFFFFF;        /* Arts: white */
+      --science: #4A9BE8;     /* Science: blue */
+      --literature: #F5C518;  /* Literature: yellow */
+    }
+
+    /* ---------- 2. BASIC SETUP ---------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 17px; line-height: 1.7;
+      color: var(--black); background: var(--white);
+    }
+    h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; }
+    a { color: inherit; }
+    .container { width: min(1100px, 90%); margin: 0 auto; }
+    section { padding: 110px 0; }
+    .eyebrow {
+      text-transform: uppercase; letter-spacing: .18em;
+      font-size: .75rem; font-weight: 600; color: var(--grey);
+    }
+    .section-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; margin: 12px 0 20px; }
+    .lead { font-size: 1.15rem; color: var(--grey); max-width: 620px; }
+
+    /* ---------- 3. LOGO: three equal coloured lines ---------- */
+    .logo-mark { display: flex; gap: 5px; height: 34px; }
+    .logo-mark span { display: block; width: 6px; height: 100%; border-radius: 3px; }
+    .logo-mark span:nth-child(1) { background: var(--arts); }
+    .logo-mark span:nth-child(2) { background: var(--science); }
+    .logo-mark span:nth-child(3) { background: var(--literature); }
+
+    /* ---------- 4. BUTTONS ---------- */
+    .btn {
+      display: inline-block; padding: 14px 28px; font-weight: 600; font-size: .95rem;
+      text-decoration: none; border: 1.5px solid currentColor; transition: background .15s, color .15s;
+    }
+    .btn-light { background: var(--white); color: var(--black); border-color: var(--white); }
+    .btn-light:hover { background: transparent; color: var(--white); }
+    .btn-ghost { color: var(--white); }
+    .btn-ghost:hover { background: var(--white); color: var(--black); }
+    .btn-dark { background: var(--black); color: var(--white); border-color: var(--black); }
+    .btn-dark:hover { background: var(--white); color: var(--black); }
+    .btn-outline { color: var(--black); }
+    .btn-outline:hover { background: var(--black); color: var(--white); }
+
+    /* ---------- 5. TOP NAVIGATION ---------- */
+    header { position: sticky; top: 0; z-index: 50; background: var(--header-bg); color: var(--white); }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-text { font-weight: 600; line-height: 1.2; font-size: .9rem; }
+    .logo-text small { display: block; font-weight: 400; color: #9A9A9A; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: .92rem; color: #CFCFCF; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .nav-links a.active { border-bottom: 2px solid var(--literature); padding-bottom: 4px; }
+    .menu-btn { display: none; background: none; border: 0; color: var(--white); font-size: 1.7rem; cursor: pointer; }
+
+    /* ---------- 6. HERO + EVENT ---------- */
+    .hero { background: var(--white); color: var(--black); padding: 100px 0 110px; border-bottom: 1px solid var(--line); }
+    .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 64px; align-items: center; }
+    .hero .eyebrow { color: var(--grey); }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 800; margin: 16px 0 24px; }
+    .hero p.intro { font-size: 1.15rem; color: var(--grey); max-width: 540px; margin-bottom: 36px; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    .event-card { background: var(--white); color: var(--black); padding: 36px; border: 1.5px solid var(--black); }
+    .event-card .eyebrow { color: var(--grey); }
+    .event-card h2 { font-size: 1.8rem; font-weight: 800; margin: 10px 0 20px; }
+    .event-meta { list-style: none; margin-bottom: 24px; border-top: 1px solid var(--line); }
+    .event-meta li { display: flex; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: .97rem; }
+    .event-meta strong { min-width: 64px; font-weight: 600; }
+    .countdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px; }
+    .countdown div { background: var(--soft); text-align: center; padding: 12px 4px; }
+    .countdown span { display: block; font-size: 1.8rem; font-weight: 800; line-height: 1; }
+    .countdown small { font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--grey); }
+
+
+    .event-sub { color: var(--grey); margin: -8px 0 18px; }
+    .event-sub strong { color: var(--black); font-weight: 600; }
+    .event-note { font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; text-align: center; margin-bottom: 12px; }
+    .event-more { display: block; text-align: center; margin-top: 14px; font-size: .9rem; color: var(--grey); }
+
+    /* ---------- EVENT PROGRAMME ---------- */
+    .programme-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; align-items: start; }
+    .programme-list { margin: 32px 0; border-top: 1px solid var(--line); }
+    .programme-list div { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .programme-list dt { font-weight: 600; }
+    .programme-list dd { color: #333; }
+    .programme-credits { color: var(--grey); font-size: .95rem; margin-bottom: 28px; }
+    .programme-credits strong { color: var(--black); font-weight: 600; }
+    .poster img { width: 100%; height: auto; display: block; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(0,0,0,.12); }
+
+    /* ---------- 7. ABOUT ---------- */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .about-quote { border-left: 3px solid var(--black); padding: 6px 0 6px 28px; font-size: 1.5rem; font-weight: 500; line-height: 1.45; }
+    .about-quote small { display: block; margin-top: 16px; font-size: .95rem; font-weight: 400; color: var(--grey); }
+
+    /* ---------- 8. THREE PILLARS ---------- */
+    .pillars { background: var(--soft); }
+    .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; background: var(--line); }
+    .pillar { background: var(--white); padding: 40px 32px; }
+    .pillar-bar { width: 36px; height: 5px; border-radius: 3px; margin-bottom: 26px; }
+    .pillar:nth-child(1) .pillar-bar { background: var(--black); }    /* Arts = white line, shown black on white so it's visible */
+    .pillar:nth-child(2) .pillar-bar { background: var(--science); }
+    .pillar:nth-child(3) .pillar-bar { background: var(--literature); }
+    .pillar h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
+    .pillar p { color: var(--grey); }
+
+    /* ---------- 9. GET INVOLVED ---------- */
+    .involve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin: 48px 0; }
+    .involve-card { border-top: 2px solid var(--black); padding-top: 22px; }
+    .involve-card h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; }
+    .involve-card p { color: var(--grey); }
+
+    /* ---------- 10. CONTACT ---------- */
+    .contact { background: var(--soft); color: var(--black); }
+    .contact .eyebrow { color: var(--grey); }
+    .contact .lead { color: var(--grey); }
+    .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+    .contact-list { list-style: none; border-top: 1px solid #D6D6D6; }
+    .contact-list li { padding: 14px 0; border-bottom: 1px solid #D6D6D6; display: flex; gap: 16px; }
+    .contact-list strong { min-width: 96px; font-weight: 600; color: var(--grey); }
+
+    /* ---------- 11. FOOTER ---------- */
+    footer { background: var(--header-bg); color: #8A8A8A; padding: 28px 0; font-size: .88rem; border-top: 1px solid #555555; }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+    footer .logo-mark { height: 22px; gap: 4px; }
+    footer .logo-mark span { width: 4px; }
+
+    /* ---------- 12. MOBILE LAYOUT ---------- */
+    @media (max-width: 860px) {
+      section { padding: 72px 0; }
+      .hero { padding: 64px 0 80px; }
+      .hero-grid, .about-grid, .contact-grid, .programme-grid { grid-template-columns: 1fr; gap: 40px; }
+      .programme-list div { grid-template-columns: 90px 1fr; }
+      .pillar-grid, .involve-grid { grid-template-columns: 1fr; }
+      .event-card { padding: 28px; }
+      .menu-btn { display: block; }
+      .nav-links {
+        display: none; position: absolute; top: 72px; left: 0; right: 0;
+        flex-direction: column; gap: 0; background: var(--header-bg); padding: 8px 0 18px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { display: block; padding: 12px 5%; }
+      .nav-links a.active { border-bottom: 0; }
+    }
