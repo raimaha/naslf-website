@@ -216,11 +216,12 @@ section { padding: 104px 0; }
 .guest-wide p:not(.guest-role) { max-width: 880px; }
 
 /* ---------- 13. Past events ---------- */
-.past-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; }
+.past-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; margin-top: 48px; }
 .past { border-top: 2px solid var(--ink); padding-top: 22px; }
 .past-num { font-family: var(--display); font-size: .95rem; letter-spacing: .14em; color: var(--grey); }
 .past h3 { font-size: 1.35rem; margin: 8px 0 6px; }
 .past p { color: var(--grey); font-size: .95rem; }
+.past .past-first { font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); margin-bottom: 6px; }
 .past .past-place { margin-top: 10px; font-size: .85rem; font-weight: 600; color: var(--ink); }
 
 /* ---------- 14. Dark call-to-action band ---------- */
@@ -256,6 +257,12 @@ section { padding: 104px 0; }
 .member-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2px; margin-top: 40px; background: var(--line); border: 2px solid var(--line); }
 .member-grid li { background: var(--paper); padding: 22px 24px; font-family: var(--display); font-weight: 500; font-size: 1.15rem; letter-spacing: .01em; }
 
+.photog { display: grid; grid-template-columns: minmax(280px, 460px) 1fr; gap: 64px; align-items: center; }
+.photog-logo img { width: 100%; height: auto; box-shadow: 0 20px 50px rgba(0,0,0,.18); }
+.photog-ask { margin: 22px 0 10px; font-weight: 600; }
+.photog-facts { max-width: 520px; margin-bottom: 0; }
+@media (max-width: 960px) { .photog { grid-template-columns: 1fr; gap: 36px; } .photog-logo { max-width: 460px; } }
+
 /* ---------- 16. Footer ---------- */
 .site-footer { background: var(--charcoal); color: #D6D6D6; padding: 72px 0 32px; font-size: .94rem; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1.1fr 1.1fr; gap: 40px; }
@@ -275,6 +282,7 @@ section { padding: 104px 0; }
   .feature, .two-col { grid-template-columns: 1fr; gap: 48px; }
   .feature .poster-wrap { max-width: 420px; margin: 0 auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .past-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 860px) {
