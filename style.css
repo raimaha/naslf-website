@@ -221,6 +221,7 @@ section { padding: 104px 0; }
 .past-num { font-family: var(--display); font-size: .95rem; letter-spacing: .14em; color: var(--grey); }
 .past h3 { font-size: 1.35rem; margin: 8px 0 6px; }
 .past p { color: var(--grey); font-size: .95rem; }
+.past .past-place { margin-top: 10px; font-size: .85rem; font-weight: 600; color: var(--ink); }
 
 /* ---------- 14. Dark call-to-action band ---------- */
 .band { background: var(--charcoal); color: var(--paper); padding: 96px 0; text-align: center; }
@@ -251,6 +252,9 @@ section { padding: 104px 0; }
 .steps { list-style: none; counter-reset: step; margin-top: 24px; }
 .steps li { counter-increment: step; display: grid; grid-template-columns: 44px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .steps li::before { content: counter(step); font-family: var(--display); font-size: 1.3rem; font-weight: 500; }
+
+.member-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2px; margin-top: 40px; background: var(--line); border: 2px solid var(--line); }
+.member-grid li { background: var(--paper); padding: 22px 24px; font-family: var(--display); font-weight: 500; font-size: 1.15rem; letter-spacing: .01em; }
 
 /* ---------- 16. Footer ---------- */
 .site-footer { background: var(--charcoal); color: #D6D6D6; padding: 72px 0 32px; font-size: .94rem; }
